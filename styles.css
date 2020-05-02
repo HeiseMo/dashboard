@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    background-color: #8e44ad;
+    height: 100vh;
+    width: 100vw;
+}
+.overlay-left {
+height: 100vh;
+width: 15vw;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.overlay-left-container{
+    height: 100vh;
+    width: 10vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 0.0025em solid black;
+
+}
+.overlay-left-container-title{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 0.0025em solid black;
+    font-size: 2em;
+
+}
+.overlay-left-container-navigation{
+height: 30vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 5vh;
+color: white;
+font-size: 1.2em;
+}
+
+.navBox{
+    height:7vh;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.navBox img{
+margin-right:2vw;
+}
+
+.navBoxActive {
+    background-color: white;
+    width: 16.5vw;
+    color:black;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.navBox:hover{
+    background-color: white;
+    width: 16.5vw;
+    color:black;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.overlay-right{
+background-color: white;
+margin-top: 2.5vh;
+margin-bottom: 2.5vh;
+height: 95vh;
+width: 84vw;
+border-radius: 50px;
+}
