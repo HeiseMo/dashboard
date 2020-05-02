@@ -2,14 +2,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Megrim&family=Yrsa:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
         <div class="main">
             <div class="overlay-left">
                 <div class="overlay-left-container">
                     <div class="overlay-left-container-title">
-                        <span>Expense App</span>
+                        <span>App</span>
                     </div>
+                    <div class="overlay-left-hr"></div>
                     <div class="overlay-left-container-navigation">
                         <div id="one" class="navBox navBoxActive">
                             <img src="https://img.icons8.com/wired/64/000000/home.png"/><span>Home</span>
@@ -17,15 +20,95 @@
                         <div id="two" class="navBox">
                             <img src="https://img.icons8.com/dotty/80/000000/report-file.png"/><span>Reports</span>
                         </div>
-                        <div id="three" class="navBox">
-                            <img src="https://img.icons8.com/wired/64/000000/question-mark.png"/><span>F.A.Q</span>
+                        <div id="four" class="navBox">
+                            <img src="https://img.icons8.com/wired/64/000000/settings.png"/><span>Settings</span>
+                        </div>
+                        <div id="five" class="navBox">
+                            <img src="https://img.icons8.com/wired/64/000000/exit.png"/><span>Logout</span>
+                        </div>
+                        <div class="overlay-left-hr">
+                        </div>
+                    </div>
+                    <div class="overlay-left-bottom">
+                        <div class="top-left-box">
+                        </div>
+                        <div class="github"></div>
+                        <div class="bottom-right-box">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="overlay-right">
-
+                <div class="userBar">
+                    <div class="userBarInfo">
+                        <span>HeiseMo</span>
+                        <div class="profileImg"></div>
+                    </div>
+                </div>
+                <div class="chartBar">
+                    <div class="pageHeading">
+                        <span>My Dashboard</span>
+                    </div>
+                    <div class="chartArea">
+                        <canvas id="myChart" width="1000" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="expenseBar">
+                    <div class="expenseBox" style="color: #19b698;">
+                        <div class="expenseName">
+                            <p>Expense Type</p>
+                        </div>
+                        <div class="expenseDate">
+                            <p>Purchase Date</p>
+                        </div>
+                        <div class="expenseCreator">
+                            <p>Description</p>
+                        </div>
+                        <div class="expenseSum">
+                            <p>Sum</p>
+                        </div>
+            
+                    </div>
+                    <div class="expenseBox">
+                        <div class="expenseName">
+                            <p>Rewe</p>
+                        </div>
+                        <div class="expenseDate">
+                            <p>02.05.2020</p>
+                        </div>
+                        <div class="expenseCreator">
+                            <p>Some Milk!</p>
+                        </div>
+                        <div class="expenseSum">
+                            <p>12</p>
+                        </div>
+            
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                datasets: [{
+                    label: 'Daily expense counts',
+                    data: [12, 19, 3, 5, 2, 3, 5, 9, 7, 8, 1, 40, 3, 5, 2],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
 </html>
